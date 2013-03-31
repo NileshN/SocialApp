@@ -1,0 +1,14 @@
+<div class="statuspane" style="padding-top:10px;"> 
+  <div id="status_new"></div>
+  <div id="statuses_list">
+    <% if statuses.size == 0 %>
+      <div id="noPostMsg">
+        <br /><i>Looks like you are waiting to share something with your friends yet!</i>
+      </div>
+    <% else %>
+        <% statuses.each do |status| %>
+            <%= render(:partial => "statuses/status", :locals => { :status => status } ) %>
+        <% end %>
+    <% end %>
+  </div>  
+</div>

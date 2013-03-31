@@ -1,0 +1,6 @@
+<div class="friendspane">
+  <h1>People Around</h1>
+  <% users.each do |user| %>
+        <%= link_to user.display_name, user_statuses_path(user), :title => "Click to visit #{user.display_name}'s profile" %><br />
+  <% end %>
+</div>

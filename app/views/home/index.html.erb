@@ -1,0 +1,23 @@
+<div class="content">
+  <div class="leftpane">
+        <!-- User info -->
+        <%= render(:partial => "users/current_user_info", :locals => { :user => @user} ) if params[:action] == "index" %>
+        
+        <!-- User info -->
+        <%= render(:partial => "users/selected_user_info", :locals => { :visited_user => @user} ) %>
+ 
+        <!-- New Status Ajax Form -->
+        <%= render(:partial => "statuses/status_form") %>
+      
+        <!-- All Statuses List -->
+        <%= render(:partial => "statuses/statuses", :locals => { :statuses => @statuses }) %>
+  </div>
+  <div class="rightpane">
+    <%= render(:partial => "users/users", :locals => { :users => @users } )%>
+  </div>
+</div>
+<script type="text/javascript">
+  $('#content').focus(function() {
+    $('#content').val("");
+  });
+</script>

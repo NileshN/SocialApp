@@ -1,0 +1,8 @@
+<div class="about">
+  <% if user_signed_in? %>
+    <%= form_tag url_for(user_statuses_path(current_user)), :id => "global_action_form", :remote => true do %>
+        <%= text_area_tag :content, "What's in your mind?", :size => "60x3" %>
+        <%= submit_tag "Post" %>
+    <% end %>
+  <% end %>
+</div>

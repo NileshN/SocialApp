@@ -1,0 +1,10 @@
+<div style="width:100%; height:110px">
+  <div style="float: left; width: 20%;">
+    <%= image_tag "user.png", :alt => current_user.display_name %>
+  </div>
+  <div style="float: right; width: 75%;">
+    <h1>
+        <%= link_to current_user.display_name, root_path %>
+    </h1>
+  </div>
+</div>

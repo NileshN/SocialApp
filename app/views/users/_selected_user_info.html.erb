@@ -1,0 +1,12 @@
+<% unless current_user.id == visited_user.id %>
+    <h1>You are viewing <%= visited_user.display_name %>'s profile</h1>
+    <% unless current_user.subscribed_already?(visited_user.id) %>
+      <div id="subscribe_link_pane">
+        <%= render(:partial => "users/subscribe_link", :locals => { :visited_user => visited_user } ) %>
+      </div>
+    <% else %>
+      <div id="subscribe_link_pane">
+        <%= render(:partial => "users/unsubscribe_link", :locals => { :visited_user => visited_user } ) %>
+      </div>
+    <% end %>
+<% end %>

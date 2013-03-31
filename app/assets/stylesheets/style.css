@@ -1,0 +1,73 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	background: url(page_bg.jpg) repeat-x #fffde4; color:#717f67; font-family:Arial, Helvetica, sans-serif; font-size:12px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+p{ line-height:18px; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+
+
+.page{width:930px; margin: 0 auto; }
+.pageinner{ float:left; width:930px;}
+.header{float:left;  width:930px; height:232px; background:url(header.jpg);}
+
+.topnav{float:right; margin:20px 0px 20px ;}
+.topnav li { float:left; font-size:14px; font-weight:bold; display:block; }
+.topnav li a:link, .topnav li a:visited { color: #247d7a; margin:0px 0px 0px 10px; text-decoration:none; display:block; padding:5px 10px; }
+.topnav li a:hover, .topnav li.current a { background: #14bab4; -moz-border-radius:10px; display:block; color:#FFFFFF;}  
+
+.content{float:left;  width:900px; background:url(contentbg_top.png) no-repeat top left; padding:15px;}
+.content h1{ color:#2c787b; font-size:22px; padding:20px 0px 6px 0px; font-family:"Trebuchet MS"; font-weight:normal; }
+.leftpane{ width:557px; margin-left:10px; float:left}
+.rightpane{ float:right;width:268px; margin-right:10px;  }
+.imagecont { margin:10px 0px 6px 0px;}
+.contentbottom{float:left;  width:930px; background:url(contentbg_bottom.png) no-repeat  left top; height:30px;}
+.footer{float:left; width:930px; color:#a18545; font-size:11px; padding:10px 0px;}
+.footerleft{ float:left;}
+.footerright{ float:right;}
+.footer a{color:#a18545;}

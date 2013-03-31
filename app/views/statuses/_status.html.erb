@@ -1,0 +1,13 @@
+<div id="status" class="statusBox">
+  <b>
+   <% if status.user == current_user %>
+     <%= link_to status.user.display_name, root_path, :title => "Click to visit #{status.user.display_name}'s profile" %> Shared
+   <% else %>
+    <%= link_to status.user.display_name, user_statuses_path(status.user), :title => "Click to visit #{status.user.display_name}'s profile" %> Shared
+   <% end %>
+  </b>:<br />    
+  <%= status.content %><br />
+  <i>before <%= time_ago_in_words(status.created_at) %></i>
+  <br />
+  <div class="line-separator"></div>
+</div>

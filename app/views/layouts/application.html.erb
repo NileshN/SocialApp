@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SOCIAL WEBSITE</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" %>
+  <%= csrf_meta_tags %>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+  <!--
+  .style1 {color: #009900}
+  .style2 {color: #F4A141}
+  .style3 {color: #619C0C}
+  -->
+  </style>
+</head>
+<body style="align:'center'">
+  <div style="float:right; padding: 15px 100px 0px 0px;">
+    <% if user_signed_in? %>
+      Signed in as <%= current_user.display_name %>. Not you?
+      <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+    <% else %>
+      <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+    <% end %>
+  </div>
+  <div class="page">
+    <div class="pageinner">
+      <div class="header"></div>
+      <%= yield %>
+      <div class="contentbottom"></div>
+      <div class="footer">
+        <div class="footerleft">All Rights Reserved</div> 
+        <div class="footerright"><a href="#">Conact Us</a></div> 
+      </div>
+    </div>
+  </div>
+</body>
+</html>
