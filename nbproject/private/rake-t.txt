@@ -1,5 +1,0 @@
-(in F:/whats it/xpansion_app)
-rake aborted!
-no such file to load -- bundler/setup
-F:/whats it/xpansion_app/rakefile:5
-(See full trace by running task with --trace)
